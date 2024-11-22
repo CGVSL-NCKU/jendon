@@ -1,0 +1,1219 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Experiments</title>
+</head>
+
+<body background="../Jpg/cnvbkgnd.jpg">
+
+<p class="MsoBodyText" style="margin-left:18.0pt;text-indent:-18.0pt;line-height:
+150%;mso-list:l8 level1 lfo14;tab-stops:list 18.0pt;mso-layout-grid-align:none;
+vertical-align:baseline"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:16.0pt;mso-bidi-font-size:10.0pt;mso-font-kerning:
+0pt">Experiments<o:p>
+</o:p>
+</span></b></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">In this 
+section, many synthesized images that were used or similar to those used in 
+previous studies were used to evaluate the proposed interpolation method. In the 
+most following illustrations, the left side of figures shows the original two 
+input contour objects and specified feature lines. The right side of figures 
+shows a sequence of interpolation using the proposed method. <o:p>
+</o:p>
+</span><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Interpolation 
+using a pair of synthetic contours is illustrated in Figure 8 (left). Lee <i style="mso-bidi-font-style:normal">et 
+al.</i> [12] showed that if there is no prior alignment between these two input 
+images, shape-based interpolation couldn’t perform well. The shape-based 
+method creates a bad interpolation, where there is no contour in the 
+interpolated image. In contrast, the proposed method yields better interpolation 
+as shown in Figure 8 (right). In fact, the proposed method employs features to 
+automatically achieving the task of object centralization used in [12]. 
+Additionally, in Figure 4 shown in previous section, the source image contains a 
+small ring, while target image contains a large one with a large offset. This 
+case was not handled well by morphology-based scheme [10]. In contrast, the 
+proposed method performs very well.<o:p>
+</o:p>
+</span></p>
+<span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="0" height="10"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><img src="Experi3.gif" v:shapes="_x0000_s1026 _x0000_s1027 _x0000_s1028 _x0000_s1029 _x0000_s1030 _x0000_s1031 _x0000_s1032 _x0000_s1033 _x0000_s1034 _x0000_s1035 _x0000_s1036" width="516" height="144"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </span>(left)<span style="mso-font-kerning: 0pt; mso-ignore: vglayout" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </span><span style="mso-spacerun:
+yes">&nbsp; </span>(right)</span></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span lang="EN-US" style="mso-font-kerning:0pt">Figure 8. Interpolation 
+      between two synthetic contours with a large offset. On the left side, two 
+      feature lines are marked on each slice.</span></td>
+  </tr>
+</table>
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Both   
+Figures 9 and 10 were tested in [6]. Lin <i style="mso-bidi-font-style:normal">et   
+al.</i> [6] termed Figure 9 a “moderate” concave case and Figure 10 an   
+“extreme” concave case. Their approach employed a very computationally   
+intensive method to distort one contour to like another one. This approach can   
+yield satisfactory results for the moderate concave case, but not for the   
+extreme concave case. Using the simpler proposed scheme, the shapes of   
+intermediate contour change smoothly between two different shape contours for   
+both “moderate” and “extreme” concave cases. In these two examples, the   
+shapes pf two given contours do not change globally. The left portion of figures   
+is either shrinking or enlarging. Therefore, we cannot simply place two cross   
+lines like Figure 8 on these two examples. Alternatively, we place corresponding   
+feature lines along the boundaries of two given contours. In this manner, these   
+features can effectively control the change of shapes.<span style="mso-spacerun: yes">&nbsp;   
+</span><o:p>
+</o:p>  
+</span></p>
+<span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0" align="left">
+  <tr>
+    <td><img src="Experi4.jpg" align="left" hspace="12" v:shapes="_x0000_s1035" width="180" height="88"></td>
+    <td><img src="Experi5.gif" v:shapes="_x0000_s1026 _x0000_s1027 _x0000_s1028 _x0000_s1029 _x0000_s1030 _x0000_s1031 _x0000_s1032 _x0000_s1033 _x0000_s1034" width="360" height="144"></td>
+  </tr>
+  <tr>
+    <td align="center"><span lang="EN-US" style="mso-font-kerning:0pt">(left)<span style="mso-spacerun:
+yes"> </span></span></td>
+    <td align="center"><span lang="EN-US" style="mso-font-kerning:0pt">(right)</span></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+      9. A “moderate” concave case [6].</span></td>
+  </tr>
+</table>
+</span><!--[if gte vml 1]><v:shape id="_x0000_s1035" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:9.95pt;
+ width:135.15pt;height:66pt;z-index:2;mso-wrap-edited:f' wrapcoords="-42 0 -42 21515 21600 21515 21600 0 -42 0"
+ o:allowincell="f">
+ <v:imagedata src="../../../DOCUME~1/CHAO-H~1/LOCALS~1/Temp/msoclip1/01/clip_image010.jpg"
+  o:title="Image34"/>
+ <w:wrap type="tight"/>
+</v:shape><![endif]-->
+<span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>  
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</span>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;  
+</span><span style="mso-spacerun:
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span><o:p>
+</o:p> 
+</span></p>
+<span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0" align="left">
+  <tr>
+    <td><img src="Experi6.jpg" align="left" hspace="12" v:shapes="_x0000_s1045" width="180" height="88"></td>
+    <td><img src="Experi7.gif" v:shapes="_x0000_s1026 _x0000_s1027 _x0000_s1028 _x0000_s1029 _x0000_s1030 _x0000_s1031 _x0000_s1032 _x0000_s1033 _x0000_s1034" width="360" height="132"></td>
+  </tr>
+  <tr>
+    <td align="center"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; 
+      </span>(left)<span style="mso-spacerun:
+yes"></span></span></td>
+    <td align="center"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun:
+yes">&nbsp;&nbsp; </span>(right)</span></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+      10. An “extreme” concave case [6].<o:p>
+      </o:p>
+      </span></td>
+  </tr>
+</table>
+</span><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>  
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Many   
+previous studies suggested to apply object centralization to have one object   
+enclosed by another one before interpolation [16,17,18]. Sun <i style="mso-bidi-font-style:normal">et   
+al.</i> pointed out that this conventional centralization (i.e., aligning the   
+centroids of the two objects) sometimes fail when the objects are concave like   
+Figure 11 (left) and 12. To solve this issue, Sun <i style="mso-bidi-font-style:normal">et   
+al.</i> [11] iteratively employed object centralization and object enlargement   
+to ensure that object enclosure can occur. After interpolation, this approach   
+requires contour shrinking by means of erosion to compensate the effect of   
+object enlargement. Furthermore, this process cannot always guarantee object   
+enclosure even when the enlarging factor becomes extremely large [11]. The whole   
+process seems not very efficient with respect to computational complexity. In   
+this respect, our proposed scheme seems more practical than this approach.   
+Figure 11 (right) shows a sequence of interpolated results using the proposed   
+scheme.<o:p>
+</o:p>  
+<o:p>  
+</o:p>  
+</span></p>
+<span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0" align="left" width="693">
+  <tr>
+    <td width="206"><img src="Experi8.jpg" align="left" hspace="12" v:shapes="_x0000_s1046" width="180" height="88"></td>
+    <td width="483"><img src="Experi9.gif" v:shapes="_x0000_s1035 _x0000_s1036 _x0000_s1037 _x0000_s1038 _x0000_s1039 _x0000_s1040 _x0000_s1041 _x0000_s1042 _x0000_s1043" width="336" height="168"></td>
+  </tr>
+  <tr>
+    <td align="center" width="206"><span lang="EN-US" style="mso-font-kerning:0pt">(left)<span style="mso-spacerun: yes"></span></span></td>
+    <td align="center" width="483"><span lang="EN-US" style="mso-font-kerning:0pt">(right)</span></td>
+  </tr>
+  <tr>
+    <td colspan="2" width="691"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+      11. Object enclosure does not occur after applying conventional 
+      centralization on two concave objects [11].</span></td>
+  </tr>
+</table>
+</span><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>  
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<div align="center">
+  <center>
+  <table border="0" width="100%">
+    <tr>
+      <td width="100%"><img src="Experi10.jpg" align="left" hspace="12" v:shapes="_x0000_s1044" width="168" height="168"></td>
+    </tr>
+    <tr>
+      <td width="100%"><span lang="EN-US" style="mso-font-kerning:0pt">Figure   
+        12. Overlapping of concave objects after centroid alignment cannot   
+        guarantee to achieve object enclosure [11].</span></td>  
+    </tr>
+  </table>
+  </center>
+</div>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">The   
+next two examples were evaluated in [10]. Figure 13 is a set of ring-like   
+objects with no overlapping area and Figure 14 illustrates the interpolation   
+between a hollow object and a solid object. In both cases, we need to generate   
+negative objects due to holes. Figure 14 needs to generate a pseudo negative   
+hole. Then, we separately interpolated positive and negative object pairs and   
+then blended them like our previous work [12]. Guo<i style="mso-bidi-font-style:normal">   
+et al.</i> [10] reported that both cases are not handled well by the original   
+shape-based method. Shape-based method simply interpolates distance code for the   
+whole image. Guo <i style="mso-bidi-font-style:normal">et al.</i> [10] also   
+pointed out that [6] fails to deal with Figure 14, but this dynamic elastic   
+method is very computationally intensive. However, our results show the proposed   
+scheme yields very satisfactory results in both examples.<span style="mso-spacerun: yes">&nbsp;&nbsp;   
+</span></span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><!--[if gte vml 1]><v:group id="_x0000_s1065" style='position:absolute;
+ left:0;text-align:left;margin-left:45pt;margin-top:9pt;width:297pt;height:71.25pt;
+ z-index:8' coordorigin="2700,1440" coordsize="5940,1425" o:allowincell="f">
+ <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+  o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s1066" type="#_x0000_t75" style='position:absolute;
+  left:5760;top:1440;width:2880;height:1413;mso-wrap-edited:f' wrapcoords="-41 0 -41 21516 21600 21516 21600 0 -41 0">
+  <v:imagedata src="../../../DOCUME~1/CHAO-H~1/LOCALS~1/Temp/msoclip1/01/clip_image001.jpg"
+   o:title="Image41"/>
+ </v:shape><v:shape id="_x0000_s1067" type="#_x0000_t75" style='position:absolute;
+  left:2700;top:1442;width:2883;height:1423;mso-wrap-edited:f' wrapcoords="-41 0 -41 21516 21600 21516 21600 0 -41 0">
+  <v:imagedata src="../../../DOCUME~1/CHAO-H~1/LOCALS~1/Temp/msoclip1/01/clip_image002.jpg"
+   o:title="Image40"/>
+ </v:shape></v:group><![endif]-->
+<span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0" align="left">
+  <tr>
+    <td><img src="Experi11.gif" v:shapes="_x0000_s1065 _x0000_s1066 _x0000_s1067" width="396" height="95"></td>
+  </tr>
+  <tr>
+    <td><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+      (a) positive object pair<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+      </span>(b) negative object pair</span></td>  
+  </tr>
+  <tr>
+    <td><span style="mso-ignore:vglayout"><img src="Experi12.gif" v:shapes="_x0000_s1035 _x0000_s1036 _x0000_s1037 _x0000_s1038 _x0000_s1039 _x0000_s1040 _x0000_s1041 _x0000_s1042 _x0000_s1043" width="408" height="216"></span></td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center"><span lang="EN-US" style="mso-font-kerning:0pt">(c) 
+      Interpolation</span></td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+      13. Interpolation for a set of ring-like objects [12]</span></td>
+  </tr>
+</table>
+</span><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>  
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<br style="mso-ignore:vglayout" clear="ALL">
+<span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span><span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0" align="left" width="521">
+  <tr>
+    <td width="456"><img src="Experi13.jpg" align="left" hspace="12" v:shapes="_x0000_s1062" width="372" height="73"></td>
+  </tr>
+  <tr>
+    <td width="456"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </span>(a) positive object pair<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+      </span>(b) negative object pair</span></td>  
+  </tr>
+  <tr>
+    <td width="456"><img src="Experi14.gif" v:shapes="_x0000_s1026 _x0000_s1027 _x0000_s1028 _x0000_s1029 _x0000_s1030 _x0000_s1031 _x0000_s1032 _x0000_s1033 _x0000_s1034" width="456" height="144"></td>
+  </tr>
+  <tr>
+    <td width="456">
+      <p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">(c) 
+      Interpolation<o:p>
+      </o:p>
+      </span></td>
+  </tr>
+  <tr>
+    <td width="456">
+      <p class="MsoBodyText" style="line-height: 150%; mso-layout-grid-align: none; vertical-align: baseline" align="center"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+      14. Interpolation between a hollow object and a solid object [12].<o:p>
+      </o:p>
+      </span></td>
+  </tr>
+</table>
+</span><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>  
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<br style="mso-ignore:vglayout" clear="ALL">
+<span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Branching   
+examples like Figure 15 have been widely evaluated [6,7,10,11, 12]. The proposed   
+scheme can successfully deal with Figure 15. Like [12], we first independently   
+interpolate three positive object pairs and then unite these three interpolated   
+results together to accomplish interpolation. Multiple objects may exist on two   
+input slices. In this situation, we will also employ our previous method [12] to   
+solve matching problem first and then use similar procedures to perform   
+interpolation. In this experiment, each positive object pair has two different   
+pairs of feature lines. These features effectively control where two positive   
+objects are merged. In other words, the user can fully control interpolation   
+with features.<o:p>  
+</o:p>  
+</span></p>
+<span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0" align="left" width="534">
+  <tr>
+    <td width="206"><img width="180" height="71" src="Experi15.jpg" align="left" hspace="12" v:shapes="_x0000_s1063"></td>
+    <td width="324"><img src="Experi16.gif" v:shapes="_x0000_s1044 _x0000_s1045 _x0000_s1046 _x0000_s1047 _x0000_s1048 _x0000_s1049 _x0000_s1050 _x0000_s1051 _x0000_s1052" width="324" height="132"></td>
+  </tr>
+  <tr>
+    <td width="206">
+      <p align="center"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun: yes">&nbsp;</span>(left)<span style="mso-spacerun:
+yes"> </span></span></td>
+    <td width="324">
+      <p align="center"><span lang="EN-US" style="mso-font-kerning:0pt">(right)</span></td>
+  </tr>
+  <tr>
+    <td width="530" colspan="2">
+      <p align="center"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+      15. Branching case [6,7,10,11,12].</span></td>
+  </tr>
+</table>
+</span><!--[if gte vml 1]><v:shape id="_x0000_s1063" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:18pt;
+ width:135.15pt;height:53.5pt;z-index:6;mso-wrap-edited:f' wrapcoords="-92 0 -92 21368 21600 21368 21600 0 -92 0"
+ o:allowincell="f">
+ <v:imagedata src="Experi15.jpg"
+  o:title="Image38"/>
+ <w:wrap type="tight"/>
+</v:shape><![endif]-->
+<span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>  
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Figure   
+16 is called heavy invagination case (i.e., abrupt change in shape) in [11].   
+This case was not handled well by a morphology-based scheme [11,10]. From our   
+results, it is clear that the proposed scheme can handle invagination case well,   
+too. Lee <i style="mso-bidi-font-style:normal">et al.</i> [12] cannot solve a   
+narrow concavity problem like Figure 17. In this example, there are two objects   
+X<sub>0</sub> and X<sub>n+1</sub> and the region <span style="mso-text-raise:-6.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1025"  
+ type="#_x0000_t75" style='width:83.25pt;height:18pt' o:ole="" fillcolor="window">
+ <v:imagedata src="../../../DOCUME~1/CHAO-H~1/LOCALS~1/Temp/msoclip1/01/clip_image032.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="Experi17.gif" v:shapes="_x0000_i1025" width="111" height="24"></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1118084330">
+ </o:OLEObject>
+</xml><![endif]-->
+<span style="mso-spacerun: yes">&nbsp;</span>is equal to X<sub>0</sub>. There is   
+a very narrow concavity (i.e., marked by A) in the object X<sub>0</sub>. In this   
+situation, using method presented in Lee<i style="mso-bidi-font-style:  
+normal"> et al.</i> [12], the distance codes of region near B is greater than   
+those of region near to A. Therefore, unfortunately, this method can not ensure   
+X<sub>n+1</sub> to contract into the region near B in the course of   
+interpolation. In contrast, the proposed method also easily solve this problem   
+by placing several corresponding feature lines along the boundaries of both   
+objects as illustrated in Figure 17.<o:p>  
+</o:p>  
+</span></p>
+<span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0" align="left" width="508">
+  <tr>
+    <td width="182"><img src="Experi18.jpg" align="left" hspace="12" v:shapes="_x0000_s1064" width="156" height="76"></td>
+    <td width="322"><img src="Experi19.gif" v:shapes="_x0000_s1053 _x0000_s1054 _x0000_s1055 _x0000_s1056 _x0000_s1057 _x0000_s1058 _x0000_s1059 _x0000_s1060 _x0000_s1061" width="300" height="132"></td>
+  </tr>
+  <tr>
+    <td width="182" align="center"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun: yes">&nbsp;</span>(left)<span style="mso-spacerun:
+yes"> </span></span></td>
+    <td width="322" align="center"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun:
+yes"></span>(right)</span></td>
+  </tr>
+  <tr>
+    <td width="504" colspan="2">
+      <p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+      16. The invagination case (abrupt change in shape) [11].<o:p>
+      </o:p>
+      </span></td>
+  </tr>
+</table>
+</span><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>  
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1026" type="#_x0000_t75" style='position:absolute;
+ left:0;text-align:left;margin-left:135pt;margin-top:.75pt;width:203.25pt;
+ height:101.8pt;z-index:1' o:allowincell="f">
+ <v:imagedata src="../../../DOCUME~1/CHAO-H~1/LOCALS~1/Temp/msoclip1/01/clip_image001.png"
+  o:title=""/>
+ <v:textbox style='mso-next-textbox:#_x0000_s1026'/>
+</v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="PBrush"
+ ShapeID="_x0000_s1026" DrawAspect="Content" ObjectID="_1118084747">
+</o:OLEObject>
+<![endif]><![endif]-->
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline">　
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline">
+<span style="mso-ignore:vglayout">
+<table cellpadding="0" cellspacing="0" align="left" width="455">
+  <tr>
+    <td width="158"><img src="Experi20.jpg" align="left" hspace="12" v:shapes="_x0000_s1027" width="132" height="65"></td>
+    <td width="293"><img src="Experi21.jpg" v:shapes="_x0000_s1026" width="271" height="136"></td>
+  </tr>
+  <tr>
+    <td width="158" align="center"><span lang="EN-US" style="mso-font-kerning:0pt">(left)<span style="mso-spacerun: yes"> 
+      </span></span></td>
+    <td width="293" align="center"><span lang="EN-US" style="mso-font-kerning:0pt"><span style="mso-spacerun: yes">&nbsp;</span>(right)</span></td>
+  </tr>
+  <tr>
+    <td width="451" colspan="2">
+      <p align="center"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+      17. The narrow concavity case [12].</span></td>
+  </tr>
+</table>
+</span><!--[if gte vml 1]><v:shape id="_x0000_s1027" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:27pt;margin-top:.75pt;
+ width:99pt;height:48.95pt;z-index:2;mso-wrap-edited:f' wrapcoords="-41 0 -41 21516 21600 21516 21600 0 -41 0"
+ o:allowincell="f">
+ <v:imagedata src="../../../DOCUME~1/CHAO-H~1/LOCALS~1/Temp/msoclip1/01/clip_image003.jpg"
+  o:title="Image42"/>
+ <w:wrap type="tight"/>
+</v:shape><![endif]-->
+<span lang="EN-US" style="font-size:10.0pt;mso-font-kerning:0pt"><o:p>
+</o:p>
+</span>
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US" style="font-size:10.0pt;mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p> 
+</span></p>
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US" style="font-size:10.0pt;mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US" style="font-size:10.0pt;mso-font-kerning:0pt">&nbsp;<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p> 
+<o:p> 
+&nbsp;
+</span></p>
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline">　</p>
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">We have  
+evaluated the proposed scheme using a variety of examples that used in the  
+previous work. Since our method employs feature control to help shape-based  
+interpolation, the results such as Figure 4, 6, 8, 13, 14 and 15 are reasonable  
+and continuous and smoother than are obtained by the original shape-based  
+method. Additionally, with feature control, our method considers the global and  
+local change of shapes in two given objects, so the proposed method can handle  
+cases with complicated structure such as Figure 10, 11, 16 and 17, that cannot  
+be handled well by the other methods. With the concept of positive and negative  
+objects [12], our method can simply handle the hollow and branching cases by the  
+same procedures, so that the results can be obtained easily just merging all  
+intermediate objects using a blending order presented in our previous work [12].  
+In summary, from above examples with synthesized objects, the proposed method  
+handles different situations effectively.<o:p> 
+</o:p> 
+<o:p> 
+</o:p> 
+</span></p>
+<span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">With respect to 
+computational complexity, the proposed algorithm is in proportion to the number 
+of object pairs. For each object pair, we need to perform the same procedure for 
+the whole image. Therefore, the computational complexity is higher than the 
+shape-based method. However, the proposed method can handle more general cases 
+than the shape-based method and even more than other previous work. Table 1 
+shows execution timing and the number of features used for each experiment with 
+256x256 image resolution. This timing is averaged from interpolating 200 slices 
+in each experiment. In this table, we show the execution timing (second) both 
+non-optimized and optimized versions of the proposed method. The optimized 
+version implemented method presented in Section 2.2. The optimized version 
+consistently</span>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">performs 
+faster than non-optimized for all experiments. If multiple object pairs are 
+interpolated, we also list the number of features for each pair in this table 
+such as Figure 13 and 15. Our experiments were performed on the Intel Pentium 
+II, 233MHZ personal computer with 256 MB main memory. This table indicates that 
+the execution time is in proportion to the number of object pairs and feature 
+lines. Since we perform interpolation on the whole image, the execution cost is 
+in proportion to the image resolution, too. Observing all experiments, we can 
+know it is not necessary to perform interpolation in this manner. We can save 
+more computation cost as follows. For each object pair, we find the union of 
+their bounding boxes and we just need to perform the same interpolation 
+procedure to this union area like Figure 18. Additionally, we will only perform 
+distance transform on this area, too. In this manner, we can achieve identical 
+results but with lower computation cost as shown in Table 1, too. With this 
+minor change in our implementation, the executing performance is much improved. 
+Like Figure 3, the performance is even faster by about 4.8 times. The main 
+reason is that the union area of two bounding boxes is still not significant 
+(i.e., about 20%) in contrast to the whole image. In this situation, we can save 
+time for both distance transform and interpolation.<o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" align="center" style="text-align:center;line-height:150%;
+mso-layout-grid-align:none;vertical-align:baseline"><span lang="EN-US"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:159pt;
+ height:110.25pt' o:ole="">
+ <v:imagedata src="../../../DOCUME~1/CHAO-H~1/LOCALS~1/Temp/msoclip1/01/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="Experi22.gif" v:shapes="_x0000_i1025" width="212" height="147"><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1118084847">
+ </o:OLEObject>
+</xml><![endif]-->
+</span><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Figure 
+18. B1 and B2 are bounding boxes for two given objects and both distance 
+transform and interpolation is performed only on the union area instead of the 
+whole image to save computation cost.</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<div align="center">
+  <table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+ mso-table-layout-alt:fixed;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 1.4pt 0cm 1.4pt" align="left">
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center">&nbsp;<span lang="EN-US"><o:p>
+        </o:p>
+        </span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="a0" style="line-height:18.0pt"><span lang="EN-US" style="font-family:
+  &quot;Times New Roman&quot;;mso-fareast-font-family:新細明體">Non-optimized<o:p>
+        </o:p> 
+        </span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="a0" style="line-height:18.0pt"><span lang="EN-US" style="font-family:
+  &quot;Times New Roman&quot;;mso-fareast-font-family:新細明體">Optimized<o:p>
+        </o:p>
+        </span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="a0" style="line-height:18.0pt"><span lang="EN-US" style="font-family:
+  &quot;Times New Roman&quot;;mso-fareast-font-family:新細明體">Optimized 
+        &amp; Bounding Box<o:p>
+        </o:p>
+        </span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="a0" style="line-height:18.0pt"><span lang="EN-US" style="font-family:
+  &quot;Times New Roman&quot;;mso-fareast-font-family:新細明體">No. features<o:p>
+        </o:p>
+        </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        3</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.86</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="a0" style="line-height:18.0pt"><span lang="EN-US" style="font-family:
+  &quot;Times New Roman&quot;;mso-fareast-font-family:新細明體">1.32 <o:p>
+        </o:p>
+        </span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.39</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        4</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2.14</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.59</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US" style="color:black">1.10<o:p>
+        </o:p>
+        </span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        6</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2.20</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.64</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.37</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        7</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">3.62</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2.74</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.16</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">4</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        8</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2.02</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.60</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.77</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        9</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">8.72</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">6.90</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">4.15</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">11</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        10</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">10.22</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">7.97</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="a0" style="line-height:18.0pt"><span lang="EN-US" style="font-family:
+  &quot;Times New Roman&quot;;mso-fareast-font-family:新細明體">5.52<o:p>
+        </o:p>
+        </span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">13</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        11</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2.21</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.60</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.33</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        13</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">17.19</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">13.25</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">10.10</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">11 
+        – 13</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        14</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">3.97</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2.97</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.88</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2 
+        – 2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        15</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">5.89</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">4.24</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">3.99</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2 
+        – 2 – 2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        16</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2.02</span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.59</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">1.42</span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="57" valign="top" style="width:42.55pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Fig 
+        17</span></p>
+      </td>
+      <td width="109" valign="top" style="width:82.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="a0" style="line-height:18.0pt"><span lang="EN-US" style="font-family:
+  &quot;Times New Roman&quot;;mso-fareast-font-family:新細明體">18.89<o:p>
+        </o:p>
+        </span></p>
+      </td>
+      <td width="84" valign="top" style="width:62.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">14.71</span></p>
+      </td>
+      <td width="108" valign="top" style="width:81.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="a0" style="line-height:18.0pt"><span lang="EN-US" style="font-family:
+  &quot;Times New Roman&quot;;mso-fareast-font-family:新細明體">11.02<o:p>
+        </o:p>
+        </span></p>
+      </td>
+      <td width="72" valign="top" style="width:53.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt">
+        <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">24</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt">Table  
+1. Execution timing (in second) and the number of features for all experiments.<o:p> 
+</o:p> 
+</span></p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline">　</p>
+<p class="MsoBodyText" style="line-height:150%;mso-layout-grid-align:none;
+vertical-align:baseline"><span lang="EN-US" style="mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p>　</p>
+<p>　</p>
+<p>　</p>
+<p>　</p>
+
+</body>
+
+</html>

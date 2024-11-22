@@ -1,0 +1,1320 @@
+<html>
+
+
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+<title>A morphing between the models of a cow and a horse</title>
+
+</head>
+
+
+
+<body background="jpg/0144.gif">
+
+
+
+<table border="0" width="92%">
+
+  <tr>
+
+    <td width="100%">
+
+      <p align="center"><span style="mso-bidi-font-size: 12.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><font color="#800080" size="6" face="Times New Roman">Metamorphosis  
+
+      of 3D Polyhedral Models Using Progressive Connectivity Transformations</font></span></p> 
+
+      <p class="MsoNormal" align="center" style="text-align: center; line-height: 100%"><span lang="EN-US"><font color="#800080" face="Times New Roman">Chao-Hung  
+
+      Lin and Tong-Yee Lee<o:p> 
+
+      </o:p> 
+
+      </font></span></p>
+
+      <p class="MsoNormal" align="center" style="text-align: center; line-height: 100%"><span lang="EN-US" style="mso-bidi-font-weight: bold"><font color="#800080" face="Times New Roman">Department  
+
+      of Computer Science and Information Engineering<o:p> 
+
+      </o:p> 
+
+      </font></span></p>
+
+      <p class="MsoNormal" align="center" style="text-align: center; line-height: 100%"><span lang="EN-US" style="mso-bidi-font-weight: bold"><font color="#800080" face="Times New Roman">National  
+
+      Cheng-Kung University, Tainan, Taiwan, R.O.C.</font></span></p> 
+
+      <p class="MsoNormal" align="center" style="text-align: center; line-height: 100%"><span lang="EN-US" style="mso-bidi-font-weight: bold"><font color="#008000" face="Times New Roman"><o:p>
+
+      </o:p>
+
+      </font></span></td>
+
+  </tr>
+
+</table>
+
+
+
+<table border="1" width="821">
+
+  <tr>
+
+    <td width="19" align="center"><span lang="EN-US"><font face="Times New Roman">1</font></span></td>
+
+    <td width="344" align="center"><font face="Times New Roman"><img border="0" src="jpg/CowFill.jpg" width="120" height="120">&nbsp;&nbsp;&nbsp;         
+
+      <img border="0" src="jpg/HorseFill.jpg" width="120" height="120">&nbsp;&nbsp;&nbsp;</font></td>
+
+    <td width="436" align="center">
+
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:1.4pt;
+
+ border-collapse:collapse;mso-table-layout-alt:fixed;border:none;mso-border-alt:
+
+ solid windowtext .5pt;mso-padding-alt:0cm 1.4pt 0cm 1.4pt">
+
+        <tr style="height:35.55pt">
+
+          <td width="132" rowspan="2" style="width:99.0pt;border:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt;height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Source      
+
+            Model<o:p>
+
+            </o:p>     
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Target  
+
+            Model<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/   
+
+            #edges)<o:p>
+
+            </o:p>  
+
+            </font></span></p>
+
+          </td>
+
+          <td width="125" rowspan="2" style="width:93.8pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Average 
+
+            no. of vertices for the intermediate meshes </o:p></o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td style="height:35.55pt;border:none" width="0" height="47"></td>
+
+        </tr>
+
+        <tr style="height:18.0pt">
+
+          <span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+
+  mso-fareast-font-family:&quot;MS Gothic&quot;;color:black;mso-font-kerning:1.0pt;
+
+  mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">
+
+          <td style="height:18.0pt;border:none" width="0" height="24"></td>
+
+          </span>
+
+        </tr>
+
+        <tr>
+
+          <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">2703  
+
+            / 7881<o:p> 
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">2982  
+
+            / 8607<o:p> 
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="125" valign="top" style="width:93.8pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center"><span lang="EN-US"><font color="#000000" face="Times New Roman">2842 
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td style="border:none" width="0">
+
+            <p class="MsoNormal"><font face="Times New Roman">&nbsp;</font></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center">　</td> 
+
+    <td width="786" colspan="2" align="center"><font face="Times New Roman">A morphing between the models of a cow and a horse. (<a href="video/CowToHorse(256_256).gif">Demo</a>      
+
+      256*256)</font></td>    
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center"><span lang="EN-US"><font face="Times New Roman">2</font></span></td>
+
+    <td width="344" align="center"><font face="Times New Roman"><img border="0" src="jpg/DinoFill.jpg" width="120" height="120">&nbsp;&nbsp;&nbsp;     
+
+      <img border="0" src="jpg/PigFill.jpg" width="120" height="120">&nbsp;</font></td>
+
+    <td width="436" align="center">
+
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:1.4pt;
+
+ border-collapse:collapse;mso-table-layout-alt:fixed;border:none;mso-border-alt:
+
+ solid windowtext .5pt;mso-padding-alt:0cm 1.4pt 0cm 1.4pt">
+
+        <tr style="height:35.55pt">
+
+          <td width="132" rowspan="2" style="width:99.0pt;border:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt;height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Source      
+
+            Model<o:p>
+
+            </o:p>     
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Target  
+
+            Model<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p align="center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Average    
+
+            no. of vertices for the intermediate meshes&nbsp;</font></span>   
+
+          </td>
+
+          <td style="height:35.55pt;border:none" width="0" height="47"></td>
+
+        </tr>
+
+        <tr style="height:18.0pt">
+
+          <span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+
+  mso-fareast-font-family:&quot;MS Gothic&quot;;color:black;mso-font-kerning:1.0pt;
+
+  mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">
+
+          <td style="height:18.0pt;border:none" width="0" height="24"></td>
+
+          </span>
+
+        </tr>
+
+        <tr>
+
+          <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">2637     
+
+            / 8229<o:p>    
+
+            </o:p>    
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">2795  
+
+            / 8979<o:p> 
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p align="center">　<font face="Times New Roman">2716</font></p>
+
+          </td>
+
+          <td style="border:none" width="0">
+
+            <p class="MsoNormal"><font face="Times New Roman">&nbsp;</font></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center">　</td>  
+
+    <td width="786" colspan="2" align="center"><font face="Times New Roman">A morphing between the models of a triceratops and a pig. (<a href="video/DinoToPig(256_256).gif">Demo1</a>       
+
+      256*256), (<a href="video/DinoToPig(256_256)Rotation.gif">Demo2 </a> 256*256)</font></td>      
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center"><span lang="EN-US"><font face="Times New Roman">3</font></span></td>
+
+    <td width="344" align="center"><font face="Times New Roman"><img border="0" src="jpg/ManFill.jpg" width="120" height="120">&nbsp;&nbsp;&nbsp;     
+
+      <img border="0" src="jpg/VenusFill.jpg" width="120" height="120"></font></td>
+
+    <td width="436" align="center">
+
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:1.4pt;
+
+ border-collapse:collapse;mso-table-layout-alt:fixed;border:none;mso-border-alt:
+
+ solid windowtext .5pt;mso-padding-alt:0cm 1.4pt 0cm 1.4pt">
+
+        <tr style="height:35.55pt">
+
+          <td width="132" rowspan="2" style="width:99.0pt;border:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt;height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Source      
+
+            Model<o:p>
+
+            </o:p>     
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Target  
+
+            Model<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p align="center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Average    
+
+            no. of vertices for the intermediate meshes&nbsp;</font></span>   
+
+          </td>
+
+          <td style="height:35.55pt;border:none" width="0" height="47"></td>
+
+        </tr>
+
+        <tr style="height:18.0pt">
+
+          <span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+
+  mso-fareast-font-family:&quot;MS Gothic&quot;;color:black;mso-font-kerning:1.0pt;
+
+  mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">
+
+          <td style="height:18.0pt;border:none" width="0" height="24"></td>
+
+          </span>
+
+        </tr>
+
+        <tr>
+
+          <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">1954     
+
+            / 5856<o:p>    
+
+            </o:p>    
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">50002  
+
+            / 150000<o:p> 
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p align="center">　<font face="Times New Roman">25978</font></p>
+
+          </td>
+
+          <td style="border:none" width="0">
+
+            <p class="MsoNormal"><font face="Times New Roman">&nbsp;</font></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center">　</td>  
+
+    <td width="786" colspan="2" align="center"><font face="Times New Roman">A morphing between the models of a man's head and a venus's         
+
+      head. (<a href="video/ManToVenus(256_256).gif">Demo1</a> 256*256), (<a href="video/ManToVenus(1024_1024).gif">Demo2     
+
+      </a> 
+
+      1024*1024)</font></td>  
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center"><span lang="EN-US"><font face="Times New Roman">4</font></span></td>
+
+    <td width="344" align="center"><font face="Times New Roman"><img border="0" src="jpg/ClwonFill.jpg" width="120" height="120">&nbsp;&nbsp;&nbsp;     
+
+      <img border="0" src="jpg/ManFill.jpg" width="120" height="120"></font></td>
+
+    <td width="436" align="center">
+
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:1.4pt;
+
+ border-collapse:collapse;mso-table-layout-alt:fixed;border:none;mso-border-alt:
+
+ solid windowtext .5pt;mso-padding-alt:0cm 1.4pt 0cm 1.4pt">
+
+        <tr style="height:35.55pt">
+
+          <td width="132" rowspan="2" style="width:99.0pt;border:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt;height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Source      
+
+            Model<o:p>
+
+            </o:p>     
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Target  
+
+            Model<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p align="center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Average    
+
+            no. of vertices for the intermediate meshes&nbsp;</font></span>   
+
+          </td>
+
+          <td style="height:35.55pt;border:none" width="0" height="47"></td>
+
+        </tr>
+
+        <tr style="height:18.0pt">
+
+          <span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+
+  mso-fareast-font-family:&quot;MS Gothic&quot;;color:black;mso-font-kerning:1.0pt;
+
+  mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">
+
+          <td style="height:18.0pt;border:none" width="0" height="24"></td>
+
+          </span>
+
+        </tr>
+
+        <tr>
+
+          <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">779     
+
+            / 2328<o:p>    
+
+            </o:p>    
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">1954  
+
+            / 5856<o:p> 
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p align="center">　<font face="Times New Roman">1465</font></p>
+
+          </td>
+
+          <td style="border:none" width="0">
+
+            <p class="MsoNormal"><font face="Times New Roman">&nbsp;</font></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center">　</td>
+
+    <td width="786" colspan="2" align="center"><span style="mso-spacerun: yes; font-size: 10.0pt; mso-bidi-font-size: 12.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><font face="Times New Roman">&nbsp;</font></span><font face="Times New Roman"><span style="mso-bidi-font-size: 12.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><font size="3">A      
+
+      morphing between the models of a clown’s head and a man’s head. (<a href="video/ClownToMan(Type5).gif">Demo</a>      
+
+      256*256)</font></span></font></td>    
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center"><span lang="EN-US"><font face="Times New Roman">5</font></span></td>
+
+    <td width="344" align="center"><font face="Times New Roman"><img border="0" src="jpg/Head.jpg" width="120" height="120">&nbsp;&nbsp;&nbsp;     
+
+      <img border="0" src="jpg/Venus1.jpg" width="120" height="120"></font></td>
+
+    <td width="436" align="center">
+
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:1.4pt;
+
+ border-collapse:collapse;mso-table-layout-alt:fixed;border:none;mso-border-alt:
+
+ solid windowtext .5pt;mso-padding-alt:0cm 1.4pt 0cm 1.4pt">
+
+        <tr style="height:35.55pt">
+
+          <td width="132" rowspan="2" style="width:99.0pt;border:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt;height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Source      
+
+            Model<o:p>
+
+            </o:p>     
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Target  
+
+            Model<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p align="center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Average    
+
+            no. of vertices for the intermediate meshes&nbsp;</font></span>   
+
+          </td>
+
+          <td style="height:35.55pt;border:none" width="0" height="47"></td>
+
+        </tr>
+
+        <tr style="height:18.0pt">
+
+          <span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+
+  mso-fareast-font-family:&quot;MS Gothic&quot;;color:black;mso-font-kerning:1.0pt;
+
+  mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">
+
+          <td style="height:18.0pt;border:none" width="0" height="24"></td>
+
+          </span>
+
+        </tr>
+
+        <tr>
+
+          <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><span style="mso-bidi-font-size: 12.0pt; font-family: Times New Roman; mso-fareast-font-family: MS Gothic; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><font size="3"><font face="Times New Roman">44955</font></font></span><font color="#000000">/ 
+
+            134859 </o:p>
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">50002  
+
+            / 150000<o:p> 
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p align="center">　<font face="Times New Roman">47478</font></p>
+
+          </td>
+
+          <td style="border:none" width="0">
+
+            <p class="MsoNormal"><font face="Times New Roman">&nbsp;</font></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center">　</td>
+
+    <td width="786" colspan="2" align="center"><font face="Times New Roman">A morphing between the models of a man's head and a venus's         
+
+      head.&nbsp;&nbsp;</font>
+
+      <p><font face="Times New Roman">(<a href="video/HeadToVenus(25_256).gif">Demo1</a> 256*256), (<a href="video/HeadToVenus(1024_1024).gif">Demo2</a>      
+
+      1024*1024), (<a href="video/HeadToVenus(1024_1024)Rotation.gif">Demo3</a>      
+
+      1024*1024)</font></td>    
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center"><font face="Times New Roman">6</font></td>  
+
+    <td width="344" align="center"><font face="Times New Roman"><img border="0" src="jpg/0.jpg" width="116" height="114"><img border="0" src="jpg/5.jpg" width="115" height="114"><img border="0" src="jpg/10.jpg" width="112" height="114"></font></td>
+
+    <td width="436" align="center">
+
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:1.4pt;
+
+ border-collapse:collapse;mso-table-layout-alt:fixed;border:none;mso-border-alt:
+
+ solid windowtext .5pt;mso-padding-alt:0cm 1.4pt 0cm 1.4pt">
+
+        <tr style="height:35.55pt">
+
+          <td width="132" rowspan="2" style="width:99.0pt;border:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt;height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Input    
+
+            Model<o:p>
+
+            1</o:p>  
+
+            </font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Input 
+
+            Model 2</font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/  
+
+            #edges)<o:p>
+
+            </o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Input 
+
+            Model 3</font></span></p>
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">(#vertices/     
+
+            #edges)<o:p>
+
+            &nbsp;   
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" rowspan="2" style="width:95.2pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
+
+  height:35.55pt">
+
+            <p align="center"><span lang="EN-US"><font color="#000000" face="Times New Roman">Average    
+
+            no. of vertices for the intermediate meshes&nbsp;</font></span>   
+
+          </td>
+
+          <td style="height:35.55pt;border:none" width="0" height="47"></td>
+
+        </tr>
+
+        <tr style="height:18.0pt">
+
+          <span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+
+  mso-fareast-font-family:&quot;MS Gothic&quot;;color:black;mso-font-kerning:1.0pt;
+
+  mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">
+
+          <td style="height:18.0pt;border:none" width="0" height="24"></td>
+
+          </span>
+
+        </tr>
+
+        <tr>
+
+          <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">319/   
+
+            951</o:p>
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">313/ 
+
+            <o:p>937</o:p> 
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font color="#000000" face="Times New Roman">&nbsp;329/981   
+
+            <o:p> 
+
+            </o:p>    
+
+            </font></span></p>
+
+          </td>
+
+          <td width="127" valign="top" style="width:95.2pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+            <p align="center">　<font face="Times New Roman">321</font></p>
+
+          </td>
+
+          <td style="border:none" width="0">
+
+            <p class="MsoNormal"><font face="Times New Roman">&nbsp;</font></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center">　</td>  
+
+    <td width="786" colspan="2" align="center"><span lang="EN-US" style="font-size:12.0pt;font-family:
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;mso-font-kerning:1.0pt;
+
+mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><font face="Times New Roman">Shape     
+
+      transition between three dolphins with different poses. (<a href="video/D1ToD2(256_256).gif">Demo1</a>     
+
+      256*256) ,(<a href="video/D2ToD3(256_256).gif">Demo2</a> 256*256)</font></span></td>      
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center"><font face="Times New Roman">7</font></td>  
+
+    <td width="786" colspan="2" align="center"><font face="Times New Roman">&nbsp; <img border="0" src="jpg/Demo.h87.jpg" width="102" height="120"><img border="0" src="jpg/Image1.jpg" width="120" height="120">&nbsp;&nbsp;&nbsp;        
+
+      <img border="0" src="jpg/Demo.h88.jpg" width="87" height="117"><img border="0" src="jpg/Image52.jpg" width="118" height="117"></font></td>  
+
+  </tr>
+
+  <tr>
+
+    <td width="19" align="center">　</td>  
+
+    <td width="786" colspan="2" align="center"><span lang="EN-US" style="font-size:12.0pt;font-family:
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;mso-font-kerning:1.0pt;
+
+mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><font face="Times New Roman">A         
+
+      transition between two 2D embeddings. (<a href="video/Flattening.htm">Demo</a>      
+
+      256*256). These two embeddings correspond to the portions of two models in  
+
+      purple color.</font></span></td>     
+
+  </tr>
+
+</table>
+
+
+
+<p></p>
+
+<table border="1" width="72%" height="1">
+
+  <tr>
+
+    <td width="130%" height="12" align="center" colspan="4"> 
+
+      <p align="left"><span lang="EN-US" style="font-size:12.0pt;font-family:
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold"><font face="Times New Roman">Demonstrate how the popping effects are reduced  
+
+      using our strategies.</font></span> </td> 
+
+  </tr>
+
+  <tr>
+
+    <td width="11%" height="12" align="center"> </td>
+
+    <td width="12%" height="12" align="center"><font face="Times New Roman">&nbsp;Vertex Matching</font> </td>    
+
+    <td width="56%" height="12" align="center"><font face="Times New Roman">Priority Control Function</font> </td> 
+
+    <td width="51%" height="12" align="center"><font face="Times New Roman"><img border="0" src="jpg/ClwonFill.jpg" width="80" height="80"><img border="0" src="jpg/ManFill.jpg" width="80" height="80"></font></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="11%" height="12" align="center"><font face="Times New Roman">A1.&nbsp;</font> </td>
+
+    <td width="12%" height="12" align="center"><font face="Times New Roman">No</font> </td>
+
+    <td width="56%" height="12" align="center"><font face="Times New Roman">No</font> </td>
+
+    <td width="51%" height="12" align="center"><a href="video/ClownToMan(WithoutMatching).gif"><font face="Times New Roman">Demo</font></a></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="11%" height="27" align="center"><font face="Times New Roman">A2.&nbsp;</font> </td>
+
+    <td width="12%" height="27" align="center"><font face="Times New Roman">Yes</font> </td>
+
+    <td width="56%" height="27" align="center"><font face="Times New Roman">No</font> </td>
+
+    <td width="51%" height="27" align="center"><a href="video/ClownToMan(Type4).gif"><font face="Times New Roman">Demo</font></a></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="11%" height="1" align="center"><font face="Times New Roman">A3.&nbsp;</font> </td>
+
+    <td width="12%" height="1" align="center"><font face="Times New Roman">Yes</font> </td>
+
+    <td width="56%" height="1" align="center"><font face="Times New Roman"><img border="0" src="jpg/Priority1.jpg" width="369" height="95"> </font> </td>
+
+    <td width="51%" height="1" align="center"><a href="video/ClownToMan(Type5).gif"><font face="Times New Roman">Demo</font></a></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="11%" height="1" align="center"><font face="Times New Roman">A4.&nbsp;</font> </td>
+
+    <td width="12%" height="1" align="center"><font face="Times New Roman">Yes</font> </td>
+
+    <td width="56%" height="1" align="center"><font face="Times New Roman"><img border="0" src="jpg/Priority2.jpg" width="369" height="89"> </font> </td>
+
+    <td width="51%" height="1" align="center"><a href="video/ClownToMan(Type2).gif"><font face="Times New Roman">Demo</font></a></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="130%" height="1" align="center" colspan="4">
+
+      <p align="left"><font face="Times New Roman"><font size="3"><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold" lang="EN-US">In 
+
+      the proposed paper, the following strategies are used to reduce the 
+
+      popping effects. 1) Vertex matching is performed to decrease the number of 
+
+      executions <span lang="EN-US" style="font-size:12.0pt;font-family:
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold">of three primitive operations</span>.<span lang="EN-US" style="font-size:12.0pt;font-family:
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold">2) To appropriately schedule three primitive 
+
+      operations. In this table, we demonstrate how the popping effects are 
+
+      reduced using these two strategies.</span></span></font>&nbsp;</font><p align="left"><font size="3"><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold; font-size: 12.0pt" lang="EN-US"><font face="Times New Roman">In  
+
+      the </font> </span></font><font face="Times New Roman"><span lang="EN-US" style="font-size:12.0pt;font-family:
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold"><font size="3"><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold" lang="EN-US">example A1, 
+
+      we do not execute the RoughVertexMatching() procedure and do not use the priority control function. We can see a serious  
+
+      popping effect in the demo.</span></font></span></font><p align="left"><font face="Times New Roman"><font size="3"><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold; font-size: 12.0pt" lang="EN-US">In 
+
+      the</span></font><span lang="EN-US" style="font-size:12.0pt;font-family:
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold"><font size="3"><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold" lang="EN-US"> 
+
+      example A2, the RoughVertexMatching()   
+
+      procedure is performed. We can see a great deal of&nbsp; popping effects   
+
+      are reduced in comparison with A1.</span></font></span></font><p align="left"><font face="Times New Roman"><font size="3"><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold; font-size: 12.0pt" lang="EN-US">In 
+
+      the </span></font><span lang="EN-US" style="font-size:12.0pt;font-family:
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold"><font size="3"><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold" lang="EN-US">examples A3 and A4, the&nbsp; RoughVertexMatching()   
+
+      procedure is performed and&nbsp; two different priority control functions   
+
+      are used. We can see the popping effects are reduced further.</span></font></span></font><p align="left"><font face="Times New Roman"><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold" lang="EN-US"><font size="3"><span lang="EN-US" style="font-size:12.0pt;font-family: 
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold">Note that in both examples A1 and A2, we do not  
+
+      use priority control functions. In these two cases, we equally divides the  
+
+      equal&nbsp; number of edges and vertices into N groups and assign each  
+
+      group one by one&nbsp; among N frames. </span><span lang="EN-US" style="font-size:12.0pt;font-family: 
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold">In our design, the user can interactively  
+
+      modify the curves of these functions to find&nbsp; appropriate priority  
+
+      control curves. </span></font></span> <font size="3"><span style="font-size: 12.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold" lang="EN-US">I</span></font><span style="font-family: Times New Roman; mso-fareast-font-family: 新細明體; color: black; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold" lang="EN-US"><font size="3"><span lang="EN-US" style="font-size:12.0pt;font-family: 
+
+&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;color:black;mso-font-kerning:
+
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+
+AR-SA;mso-bidi-font-weight:bold">f we can choose appropriate priority control 
+
+      functions, we can get better results. For example, as we interactively 
+
+      choose curves as shown in A3 and A4, we find A3 and A4 are better than A1 
+
+      and A2 (i.e., less popping effect). And A4 is slightly better than A3. 
+
+      Therefore, we think priority control function is a good tool to control 
+
+      morphing and to reduce popping effects. </span></font></span> </font> </td>
+
+  </tr>
+
+</table>
+
+
+
+<p>　</p>
+
+
+
+</body>
+
+
+
+</html>
+
